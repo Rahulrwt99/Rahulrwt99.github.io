@@ -1,6 +1,7 @@
 {
   "project_id": "appgprj_6a9b3f57d7bc8191a74e558ebbcdfebb",
   "static": {
-    "directory": "build/web"
+    "directory": "out",
+    "not_found_handling": "single-page-application"
   }
 }

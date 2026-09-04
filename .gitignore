@@ -3,8 +3,8 @@
 .flutter-plugins-dependencies
 .packages
 build/
+out/
 coverage/
 *.iml
 .idea/
 .vscode/
-
