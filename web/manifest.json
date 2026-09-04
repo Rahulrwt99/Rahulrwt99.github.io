@@ -1,0 +1,11 @@
+{
+  "name": "Rahul Rawat — AI/ML Engineer",
+  "short_name": "Rahul Rawat",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1C1B22",
+  "theme_color": "#1C1B22",
+  "description": "Portfolio of Rahul Rawat, AI/ML Engineer.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

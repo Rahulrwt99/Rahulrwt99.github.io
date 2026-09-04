@@ -1,0 +1,14 @@
+analyzer:
+  exclude:
+    - build/**
+
+linter:
+  rules:
+    always_use_package_imports: true
+    avoid_print: true
+    avoid_web_libraries_in_flutter: false
+    directives_ordering: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    sort_constructors_first: true
+    sort_child_properties_last: true
