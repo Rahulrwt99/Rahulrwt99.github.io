@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rahul_portfolio/app.dart';
+import 'package:rahul_portfolio/core/config/portfolio_config.dart';
 import 'package:rahul_portfolio/core/navigation/app_router.dart';
 import 'package:rahul_portfolio/core/theme/app_theme.dart';
 import 'package:rahul_portfolio/data/portfolio_content.dart';
@@ -13,6 +14,7 @@ void main() {
     await tester.pumpWidget(const PortfolioApp());
     await tester.pumpAndSettle();
 
+    expect(find.text(PortfolioConfig.siteName), findsOneWidget);
     expect(find.textContaining('I build AI systems'), findsOneWidget);
     expect(find.text(PortfolioContent.positioning), findsOneWidget);
     expect(PortfolioContent.projects, hasLength(3));
@@ -97,3 +99,4 @@ void main() {
     expect(heights, hasLength(1));
   });
 }
+

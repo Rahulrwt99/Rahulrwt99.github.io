@@ -3,6 +3,7 @@
 /// Replace every `REPLACE_WITH_...` value before deploying. The UI treats
 /// those values as intentionally unconfigured and disables the relevant CTA.
 abstract class PortfolioConfig {
+  static const siteName = 'RawatAI';
   static const name = 'Rahul Rawat';
   static const role = 'AI/ML Engineer';
   static const location = 'Bilaspur, Chhattisgarh, India';
@@ -23,3 +24,4 @@ abstract class PortfolioConfig {
   static bool isConfigured(String value) =>
       value.trim().isNotEmpty && !value.startsWith('REPLACE_WITH_');
 }
+

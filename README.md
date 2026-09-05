@@ -1,6 +1,8 @@
-# Rahul Rawat — Flutter Web Portfolio
+# RawatAI — Rahul Rawat's Portfolio
 
-Responsive portfolio for AI/ML and NLP opportunities, featuring AI engineering case studies, three published Android applications, professional links, and a downloadable resume.
+RawatAI is Rahul Rawat's responsive portfolio for AI/ML and NLP opportunities, featuring AI engineering case studies, three published Android applications, professional links, and a downloadable resume.
+
+This is a public static portfolio. It has no user accounts, authentication, database, or sign-in flow.
 
 **Website:** https://rahulrwt99.github.io/
 
@@ -66,3 +68,4 @@ Hash-based navigation lets project links open and refresh on GitHub Pages withou
 Repository: `Rahulrwt99/Rahulrwt99.github.io`. GitHub Pages uses GitHub Actions as its publishing source. Only `build/web` is deployed. The historical `.openai/hosting.json` is retained for the previous host and is not deployed by GitHub Pages.
 
 No paid hosting service or custom domain is configured.
+

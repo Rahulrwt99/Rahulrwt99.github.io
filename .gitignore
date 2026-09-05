@@ -1,4 +1,5 @@
 .dart_tool/
+.runtime/
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages
@@ -8,3 +9,4 @@ coverage/
 *.iml
 .idea/
 .vscode/
+

@@ -104,7 +104,7 @@ class _Brand extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: 'Rahul Rawat portfolio home',
+      label: '${PortfolioConfig.siteName} portfolio home',
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -130,7 +130,7 @@ class _Brand extends StatelessWidget {
           const SizedBox(width: 11),
           if (context.screenWidth > 380)
             const Text(
-              'Rahul Rawat',
+              PortfolioConfig.siteName,
               style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
             ),
         ],
@@ -138,3 +138,4 @@ class _Brand extends StatelessWidget {
     );
   }
 }
+
