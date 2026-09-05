@@ -68,4 +68,3 @@ Hash-based navigation lets project links open and refresh on GitHub Pages withou
 Repository: `Rahulrwt99/Rahulrwt99.github.io`. GitHub Pages uses GitHub Actions as its publishing source. Only `build/web` is deployed. The historical `.openai/hosting.json` is retained for the previous host and is not deployed by GitHub Pages.
 
 No paid hosting service or custom domain is configured.
-

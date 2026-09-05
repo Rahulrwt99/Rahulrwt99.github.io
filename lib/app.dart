@@ -17,4 +17,3 @@ class PortfolioApp extends StatelessWidget {
     );
   }
 }
-

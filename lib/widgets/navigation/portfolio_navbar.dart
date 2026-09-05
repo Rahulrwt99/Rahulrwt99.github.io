@@ -138,4 +138,3 @@ class _Brand extends StatelessWidget {
     );
   }
 }
-

@@ -24,4 +24,3 @@ abstract class PortfolioConfig {
   static bool isConfigured(String value) =>
       value.trim().isNotEmpty && !value.startsWith('REPLACE_WITH_');
 }
-
