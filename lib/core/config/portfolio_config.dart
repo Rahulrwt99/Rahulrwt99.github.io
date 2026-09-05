@@ -4,6 +4,7 @@
 /// those values as intentionally unconfigured and disables the relevant CTA.
 abstract class PortfolioConfig {
   static const siteName = 'RawatAI';
+  static const headerName = 'Rahul';
   static const name = 'Rahul Rawat';
   static const role = 'AI/ML Engineer';
   static const location = 'Bilaspur, Chhattisgarh, India';

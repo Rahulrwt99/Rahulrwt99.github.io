@@ -14,7 +14,7 @@ void main() {
     await tester.pumpWidget(const PortfolioApp());
     await tester.pumpAndSettle();
 
-    expect(find.text(PortfolioConfig.siteName), findsOneWidget);
+    expect(find.text(PortfolioConfig.headerName), findsOneWidget);
     expect(find.textContaining('I build AI systems'), findsOneWidget);
     expect(find.text(PortfolioContent.positioning), findsOneWidget);
     expect(PortfolioContent.projects, hasLength(3));
