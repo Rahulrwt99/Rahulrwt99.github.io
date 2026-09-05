@@ -1,0 +1,75 @@
+name: Validate and publish portfolio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out portfolio
+        uses: actions/checkout@v6
+
+      - name: Install the validated Flutter version
+        shell: bash
+        run: |
+          git clone --depth 1 --branch 3.41.7 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+
+      - name: Install dependencies
+        run: flutter pub get --enforce-lockfile
+
+      - name: Analyze source
+        run: flutter analyze --no-pub
+
+      - name: Check content, routes, and responsive layouts
+        run: flutter test --no-pub
+
+      - name: Build web release
+        run: flutter build web --release --no-pub --base-href / --no-web-resources-cdn
+
+      - name: Verify published files
+        shell: bash
+        run: |
+          test -s build/web/index.html
+          test -s build/web/main.dart.js
+          test -s build/web/resume/Rahul_Rawat_Resume.pdf
+
+      - name: Package the website
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/web
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Publish the validated website
+        id: deployment
+        uses: actions/deploy-pages@v4
