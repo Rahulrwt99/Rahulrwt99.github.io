@@ -140,15 +140,6 @@ abstract class PortfolioContent {
   ];
 
   static const skillGroups = <SkillGroup>[
-    SkillGroup('AI engineering', <String>[
-      'Large Language Models',
-      'Retrieval-Augmented Generation',
-      'Embeddings',
-      'FAISS',
-      'CrossEncoder reranking',
-      'NLI & grounding',
-      'Chat memory',
-    ]),
     SkillGroup('Backend & data', <String>[
       'Python',
       'FastAPI',
